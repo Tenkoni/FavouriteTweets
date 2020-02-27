@@ -24,8 +24,8 @@ def downloadImages(args, listURL, count, path = ''):
 
 parser = argparse.ArgumentParser()
 parser.add_argument("username", type=str, help = "Username to download from" )
-parser.add_argument("-n", "--number", type=int, help = "Max number of tweets to save, up to 3200, each tweet may contain multiple images")
-parser.add_argument("-p", "--path", type=str, help = "Path to save images at")
+parser.add_argument("-n", "--number", type=int, default = 3200, help = "Max number of tweets to save, up to 3200, each tweet may contain multiple images")
+parser.add_argument("-p", "--path", type=str, default = '', help = "Path to save images at")
 args = parser.parse_args()
 
 
